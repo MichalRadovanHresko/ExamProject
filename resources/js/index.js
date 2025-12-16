@@ -9,7 +9,7 @@ const showAll = () => {
     filterButtons.forEach(btn => {
         btn.classList.remove('active');
         btn.style.backgroundColor = '#C4956E';
-        btn.style.color = '#1A1A1A';
+        btn.style.color = '#FFFFFF';
     });
     activeFilter = null;
 };
@@ -34,11 +34,11 @@ filterButtons.forEach(button => {
         filterButtons.forEach(btn => {
             btn.classList.remove('active');
             btn.style.backgroundColor = '#C4956E';
-            btn.style.color = '#1A1A1A';
+            btn.style.color = '#FFFFFF';
         });
         this.classList.add('active');
         this.style.backgroundColor = '#6B5344';
-        this.style.color = '#FAF7F2';
+        this.style.color = '#FFFFFF';
 
         dividers.forEach(d => d.style.display = 'none');
 
