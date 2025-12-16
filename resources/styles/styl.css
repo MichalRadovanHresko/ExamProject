@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #FAF7F2;
+    color: #1A1A1A;
+}
+
+.header {
+    background: #6B5344;
+    color: white;
+    padding: 0;
+    width: 100%;
+    height: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    font-family: "Playfair Display";
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls-container {
+    background: #FAF7F2;
+    width: 430px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.search-container {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.search-container input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+    background: #C4956E;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    padding: 0 40px 0 16px;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search-container i {
+    position: absolute;
+    right: 28px;
+    color: white;
+    pointer-events: none;
+}
+
+.filter-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.filter-btn {
+    width: 94px;
+    height: 23px;
+    padding: 0;
+    border: none;
+    border-radius: 50px;
+    background: #C4956E;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.map-section {
+    width: 430px;
+    height: 516px;
+    padding: 0;
+    background: #FAF7F2;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.map-image {
+    width: 430px;
+    height: 516px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.map-bookmark {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    z-index: 20;
+}
+
+.map-marker {
+    position: absolute;
+    z-index: 19;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-marker:hover {
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}
+
+.map-marker:active {
+    transform: scale(1.1);
+}
+
+.map-marker[data-location="churches"] {
+    top: 28%;
+    left: 50%;
+}
+
+.map-marker[data-location="nature"] {
+    top: 15%;
+    left: 12%;
+}
+
+.map-marker[data-location="chapels"] {
+    top: 38%;
+    left: 35%;
+}
+
+.footer {
+    background: #6B5344;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 81px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-icon {
+    width: 61px;
+    height: 61px;
+    aspect-ratio: 1/1;
+}
+
+.discover-section {
+    background: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top: -150px;
+    position: relative;
+    z-index: 10;
+    height: auto;
+    min-height: 250px;
+}
+
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #C4956E;
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(8px);
+        opacity: 0.7;
+    }
+}
+
+.discover-bar {
+    width: 76px;
+    height: 8px;
+}
+
+.discover-section h2 {
+    font-family: "Playfair Display";
+    font-size: 25px;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+.discover-card {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 100px;
+}
+
+.discover-card-image {
+    width: 330px;
+    height: 459px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.discover-card-title {
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    letter-spacing: -0.44px;
+    color: #000;
+    margin: 0;
+}
+
+.discover-card-subtitle {
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(0, 0, 0, 0.80);
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    letter-spacing: -0.44px;
+    margin-bottom: 0;
+}
+
+.discover-card-description {
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.368px;
+    margin: 0;
+}
+
+.discover-card-hours {
+    margin-top: 47px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.552px;
+}
+
+.get-location-btn {
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    border-radius: 25px;
+    background: #C4956E;
+    width: 258px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.575px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.discover-divider {
+    width: 100%;
+    height: 1px;
+    background: #D4D4D4;
+    margin-bottom: 49px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.get-location-btn:hover {
+    opacity: 0.9;
+}
+
+.get-location-btn:active {
+    transform: translateY(0);
+}
+
+/* Ensure anchor variant keeps white text without underline */
+.get-location-btn:link,
+.get-location-btn:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.draggable-card {
+    width: 430px;
+    background: white;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+}
+
+.draggable-card:active {
+    cursor: grabbing;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #5B9FD8 0%, #7AB8E0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .controls-container {
+        width: 600px;
+        height: 100px;
+    }
+    
+    .filter-btn {
+        width: 120px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    .discover-section {
+        padding: 40px;
+    }
+    
+    .discover-card {
+        width: 450px;
+    }
+    
+    .discover-card-image {
+        width: 450px;
+        height: 600px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .header h1 {
+        font-size: 65px;
+    }
+    
+    .controls-container {
+        width: 800px;
+        height: 110px;
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .map-section {
+        position: sticky;
+        top: 0;
+        height: calc(100vh - 166px);
+        order: 1;
+        width: 700px;
+    }
+    
+    .map-image {
+        width: 700px;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .discover-section {
+        order: 2;
+        margin-top: 0;
+        border-radius: 0;
+        padding: 0 60px;
+        padding-bottom: 120px;
+        background: transparent;
+    }
+    
+    .discover-card {
+        width: 500px;
+        background: transparent;
+    }
+    
+    .discover-card-image {
+        width: 500px;
+        height: 650px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header h1 {
+        font-size: 70px;
+    }
+    
+    .controls-container {
+        width: 900px;
+    }
+    
+    main {
+        max-width: 1600px;
+    }
+    
+    .discover-section {
+        padding: 0 80px;
+    }
+    
+    .discover-section h2 {
+        font-size: 32px;
+    }
+    
+    .discover-card {
+        width: 550px;
+    }
+    
+    .discover-card-image {
+        width: 550px;
+        height: 700px;
+    }
+    
+    .discover-card-title,
+    .discover-card-subtitle {
+        font-size: 24px;
+    }
+    
+    .discover-card-description {
+        font-size: 18px;
+    }
+    
+    .discover-card-hours {
+        font-size: 26px;
+    }
+}
