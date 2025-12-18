@@ -344,7 +344,6 @@ body {
     transform: translateY(0);
 }
 
-/* Ensure anchor variant keeps white text without underline */
 .get-location-btn:link,
 .get-location-btn:visited {
     color: #FFF;
