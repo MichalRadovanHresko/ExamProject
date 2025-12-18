@@ -32,32 +32,32 @@ function suggestions(cat) {
     heavy: {
       prayer: 'Lord, You know my burden. Give me strength for today and rest in You.',
       verse: 'Psalm 34:18 — The Lord is close to the brokenhearted.',
-      breath: '4-4-6: inhale 4, hold 4, exhale 6 (×5).',
+      breath: '4-4-6: inhale 4, hold 4, exhale 6 (x5).',
       journal: 'What small step toward peace can I take today?'
     },
     restless: {
       prayer: 'Jesus, calm my anxiety. Teach me trust in every step.',
-      verse: 'Philippians 4:6–7 — Peace beyond understanding.',
-      breath: 'Box breathing 4-4-4-4 (×4).',
+      verse: 'Philippians 4:6-7 — Peace beyond understanding.',
+      breath: 'Box breathing 4-4-4-4 (x4).',
       journal: 'What can I surrender to God instead of trying to control?'
     },
     neutral: {
       prayer: 'Thank You for this ordinary day. Help me notice small gifts.',
       verse: 'Psalm 23 — The Lord is my shepherd.',
-      breath: 'Even breathing 5–5 (3 min).',
+      breath: 'Even breathing 5-5 (3 min).',
       journal: 'What simple gratitude can I practice right now?'
     },
     grateful: {
       prayer: 'Father, thank You for Your goodness. Let my gratitude bless someone today.',
       verse: 'James 1:17 — Every good gift is from above.',
-      breath: 'Inhale 4, exhale 6 with a gentle smile (×5).',
+      breath: 'Inhale 4, exhale 6 with a gentle smile (x5).',
       journal: 'Who can I thank or serve in a small way today?'
     },
     joyful: {
       prayer: 'Holy Spirit, deepen the joy in my heart so I can share it.',
       verse: 'Psalm 100 — Joyful praise to the Lord.',
       breath: 'Light, relaxed breathing while noticing gratitude (2 min).',
-      journal: 'How can I share today’s joy with my community?'
+      journal: 'How can I share todays joy with my community?'
     }
   };
   return data[cat];
